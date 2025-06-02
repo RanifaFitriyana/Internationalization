@@ -25,7 +25,7 @@ public class HomePage extends javax.swing.JFrame {
 
     private void applyFont() {
         try {
-            FontSetting fs = new FontSetting("Code2000", 1, 14);
+            FontSetting fs = new FontSetting("CODE2000", 1, 14);
             fs.selectContainer(getContentPane());
         } catch (Exception e) {
             System.err.println("Font Error: " + e.getMessage());
@@ -154,12 +154,12 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbChooseLanguageActionPerformed
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
-         try {
-        AboutPage aboutPage = new AboutPage(currentLocale);
-        aboutPage.setVisible(true);
-    } catch (Exception e) {
-        e.printStackTrace(); // Tampilkan stack trace ke konsol
-    }
+        try {
+            AboutPage aboutPage = new AboutPage(currentLocale);
+            aboutPage.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace(); // Ini WAJIB untuk tahu error
+        }
     }//GEN-LAST:event_btnAboutActionPerformed
 
     /**

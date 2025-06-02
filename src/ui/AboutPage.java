@@ -7,6 +7,7 @@ package ui;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
+import object.FontSetting;
 
 /**
  *
@@ -25,6 +26,15 @@ public class AboutPage extends javax.swing.JFrame {
         applyLanguage(locale);
     }
 
+    private void applyFont() {
+        try {
+            FontSetting fs = new FontSetting("CODE2000", 1, 14);
+            fs.selectContainer(getContentPane());
+        } catch (Exception e) {
+            System.err.println("Font Error: " + e.getMessage());
+        }
+    }
+    
     private void applyLanguage(Locale locale) {
         try {
             ResourceBundle rb = ResourceBundle.getBundle("localization/Bundle", locale);
